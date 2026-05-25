@@ -44,10 +44,10 @@ const Navbar = () => {
           className="md:hidden bg-black/95 border-t border-white/10 py-6"
         >
           <div className="flex flex-col items-center gap-6 text-lg text-white/80">
-            <a href="#about" onClick={() => setIsOpen(false)}>About</a>
-            <a href="#projects" onClick={() => setIsOpen(false)}>Projects</a>
-            <a href="#skills" onClick={() => setIsOpen(false)}>Skills</a>
-            <a href="#contact" onClick={() => setIsOpen(false)}>Contact</a>
+            
+            <a href="/projects" onClick={() => setIsOpen(false)}>Projects</a>
+            <a href="/skills" onClick={() => setIsOpen(false)}>Skills</a>
+            <a href="/contact" onClick={() => setIsOpen(false)}>Contact</a>
           </div>
         </motion.div>
       )}
