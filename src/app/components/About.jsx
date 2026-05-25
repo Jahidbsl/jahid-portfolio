@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const About = () => {
   return (
@@ -57,41 +58,50 @@ const About = () => {
             </div>
           </motion.div>
 
-          {/* Right Side - Visual / Image Area */}
+          {/* Right Side - Photo Area (Fixed) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative"
+            className="relative group"
           >
-            <div className="relative aspect-square rounded-3xl overflow-hidden border border-white/10 bg-zinc-900">
-              {/* Placeholder for your photo */}
-              <div className="absolute inset-0 bg-gradient-to-br from-pink-500/20 via-purple-500/20 to-orange-500/20" />
+            <div className="relative aspect-[4/4.5] md:aspect-square rounded-3xl overflow-hidden border border-white/10 bg-zinc-900 shadow-2xl">
               
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-40 h-40 mx-auto rounded-2xl bg-gradient-to-br from-pink-400 to-orange-500 flex items-center justify-center text-6xl mb-6 border-4 border-white/20">
-                    👨‍💻
-                  </div>
-                  <p className="text-white/60 text-sm tracking-widest">JAHID HASAN</p>
-                </div>
+              {/* Your Photo - Better Cropping */}
+              <Image 
+                src="https://i.ibb.co.com/NnLWY2jN/45b74f14-5230-469a-8bef-50c0355e8828.jpg"
+                alt="Jahid Hasan"
+                fill
+                className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                priority
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+
+              {/* Overlay Gradients */}
+              <div className="absolute inset-0 bg-gradient-to-br from-pink-500/10 via-transparent to-orange-500/10" />
+              <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
+
+              {/* Name & Title */}
+              <div className="absolute bottom-8 left-8 right-8">
+                <p className="text-white text-3xl font-bold tracking-tight">JAHID HASAN</p>
+                <p className="text-pink-400 text-lg font-medium">Full-Stack Developer</p>
               </div>
 
-              {/* Decorative Elements */}
-              <div className="absolute -top-6 -right-6 w-32 h-32 border border-white/10 rounded-full" />
-              <div className="absolute -bottom-8 -left-8 w-24 h-24 border border-white/10 rounded-full" />
+              {/* Decorative Rings */}
+              <div className="absolute -top-6 -right-6 w-32 h-32 border border-white/20 rounded-full" />
+              <div className="absolute -bottom-8 -left-8 w-24 h-24 border border-white/20 rounded-full" />
             </div>
 
-            {/* Floating Badges */}
+            {/* Floating Badge */}
             <motion.div
-              animate={{ y: [0, -15, 0] }}
+              animate={{ y: [0, -12, 0] }}
               transition={{ duration: 4, repeat: Infinity }}
               className="absolute -top-6 -right-6 bg-zinc-900 border border-white/10 rounded-2xl px-6 py-4 text-center shadow-2xl"
             >
-              <div className="text-pink-400 text-xl">🇧🇩</div>
+              <div className="text-3xl">🇧🇩</div>
               <div className="text-white text-sm mt-1">Based in</div>
-              <div className="text-white/80 font-medium">Bangladesh</div>
+              <div className="text-white/90 font-medium">Barishal, Bangladesh</div>
             </motion.div>
           </motion.div>
         </div>

@@ -7,51 +7,50 @@ import ProjectModal from './ProjectModal';
 const featuredProjects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "Pet Adoption Platform",
     category: "Full Stack",
-    desc: "Complete e-commerce solution with payment integration and admin dashboard.",
-    image: "https://images.unsplash.com/photo-1557821552-1710528125-0d1d8f6b6c3c?w=800", // Shopping
-    tech: ["Next.js", "Tailwind", "Node.js", "MongoDB", "Razorpay"],
+    desc: "Complete Adoption solution with payment integration and admin dashboard.",
+    image: "https://i.ibb.co.com/HfRKXYTM/Screenshot-From-2026-05-25-19-54-33.png", 
+    tech: ["Next.js", "Tailwind", "Express.js", "MongoDB", "Heroui"],
     features: [
       "Real-time order tracking",
       "Advanced filtering & search",
       "Beautiful product animations",
       "Admin dashboard with analytics"
     ],
-    liveLink: "#",
-    githubLink: "#"
+    liveLink: "https://b13-a9-pet-adoption-platform.vercel.app",
+    githubLink: "https://github.com/Jahidbsl/b13-a9-pet-adoption-platform"
   },
   {
     id: 2,
-    title: "AI SaaS Dashboard",
-    category: "SaaS Platform",
-    desc: "Modern AI-powered SaaS with subscription management and analytics.",
-    image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800", // Dashboard
-    tech: ["Next.js 15", "TypeScript", "Prisma", "Stripe", "Tailwind"],
+    title: "Qurbanihat livestock",
+    category: "Full Stack",
+    desc: "Modern Platform to sell halal amimals.",
+    image: "https://i.ibb.co.com/mCTZpXxK/Screenshot-From-2026-05-25-20-03-21.png", // Dashboard
+    tech: ["Next.js", "Tailwind", "Express.js", "MongoDB", "Heroui","Lotte"],
     features: [
-      "AI content generation",
-      "Usage analytics",
-      "Team collaboration",
-      "Subscription management"
+      "Real-time order tracking",
+      "Advanced filtering & search",
+      "Beautiful product animations",
     ],
-    liveLink: "#",
-    githubLink: "#"
+    liveLink: "https://a8-b13-qurbanihat-livestock.vercel.app",
+    githubLink: "https://github.com/Jahidbsl/a8-b13-qurbanihat-livestock"
   },
   {
     id: 3,
-    title: "Real-time Chat Application",
-    category: "Messaging",
-    desc: "High-performance real-time chat with video calling feature.",
-    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800", // Chat
-    tech: ["React", "Socket.io", "Express", "MongoDB"],
+    title: "Dragon News",
+    category: "Online news portal",
+    desc: "Journalism Without Fear or Favour.",
+    image: "https://i.ibb.co.com/rGPYR6Fj/Screenshot-From-2026-05-25-20-07-04.png", // Chat
+    tech: ["Next.js", "Tailwind", "Express.js", "MongoDB", "Heroui"],
     features: [
       "Real-time messaging",
       "Video & voice calls",
       "Online status",
       "Message encryption"
     ],
-    liveLink: "#",
-    githubLink: "#"
+    liveLink: "https://dragon-news-next-rho.vercel.app",
+    githubLink: "https://github.com/Jahidbsl/dragon-news-next"
   }
 ];
 

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X } from 'lucide-react';
+import Image from 'next/image';
 
 const ProjectModal = ({ project, isOpen, onClose }) => {
   if (!project) return null;
@@ -30,14 +30,22 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
             {/* Close Button */}
             <button
               onClick={onClose}
-              className="absolute top-6 right-6 z-10 text-white/70 hover:text-white transition"
+              className="absolute top-6 right-6 z-10 text-white/70 hover:text-white transition text-4xl leading-none"
             >
-              <X size={28} />
+              ×
             </button>
 
-            {/* Hero Image Placeholder */}
-            <div className="h-80 bg-gradient-to-br from-pink-500 via-purple-600 to-orange-500 relative">
-              <div className="absolute inset-0 bg-black/40" />
+            {/* Hero Image */}
+            <div className="relative h-80 w-full">
+              <Image 
+                src={project.image || "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800"} 
+                alt={project.title}
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+              
               <div className="absolute bottom-8 left-8">
                 <span className="text-white/80 text-sm tracking-widest">{project.category}</span>
                 <h2 className="text-4xl md:text-5xl font-bold text-white mt-2">
@@ -53,7 +61,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   <h3 className="text-2xl font-semibold text-white mb-4">Project Overview</h3>
                   <p className="text-white/70 leading-relaxed text-lg">
                     {project.description || 
-                      "A modern, high-performance web application built with cutting-edge technologies. Focused on exceptional user experience, scalability, and clean architecture."}
+                      "A modern, high-performance web application built with cutting-edge technologies."}
                   </p>
 
                   <div className="mt-10">
@@ -64,18 +72,12 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                           <span className="text-pink-500 mt-1.5">●</span>
                           {feature}
                         </li>
-                      )) || (
-                        <>
-                          <li className="flex items-start gap-3"><span className="text-pink-500 mt-1.5">●</span>Responsive &amp; accessible design</li>
-                          <li className="flex items-start gap-3"><span className="text-pink-500 mt-1.5">●</span>Real-time data synchronization</li>
-                          <li className="flex items-start gap-3"><span className="text-pink-500 mt-1.5">●</span>Advanced authentication system</li>
-                        </>
-                      )}
+                      ))}
                     </ul>
                   </div>
                 </div>
 
-                {/* Right Sidebar */}
+                {/* Sidebar */}
                 <div>
                   <h4 className="text-white font-medium mb-4">Tech Stack</h4>
                   <div className="flex flex-wrap gap-2">

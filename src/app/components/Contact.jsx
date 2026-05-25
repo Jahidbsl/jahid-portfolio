@@ -1,15 +1,40 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
+import Link from "next/link";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Contact = () => {
+  const socialLinks = [
+    {
+      name: "LinkedIn",
+      href: "https://www.linkedin.com/in/jahidhasan-webdev",
+      icon: <FaLinkedin />,
+    },
+    {
+      name: "GitHub",
+      href: "https://github.com/Jahidbsl",
+      icon: <FaGithub />,
+    },
+    {
+      name: "Twitter",
+      href: "https://x.com/your-username", // Replace with your link
+      icon: <FaXTwitter />,
+    },
+    {
+      name: "Instagram",
+      href: "https://www.instagram.com/jahidbsl25",
+      icon: <FaInstagram />,
+    },
+  ];
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
   const handleChange = (e) => {
@@ -19,7 +44,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("Thank you! I'll get back to you soon. ✨");
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setFormData({ name: "", email: "", subject: "", message: "" });
   };
 
   return (
@@ -35,7 +60,8 @@ const Contact = () => {
             Let's Work Together
           </h2>
           <p className="text-white/60 text-lg max-w-xl mx-auto">
-            Have a project in mind? I'm always open to discussing new opportunities and creative ideas.
+            Have a project in mind? I'm always open to discussing new
+            opportunities and creative ideas.
           </p>
         </motion.div>
 
@@ -48,8 +74,10 @@ const Contact = () => {
             className="space-y-10"
           >
             <div>
-              <h3 className="text-2xl font-semibold text-white mb-8">Get In Touch</h3>
-              
+              <h3 className="text-2xl font-semibold text-white mb-8">
+                Get In Touch
+              </h3>
+
               <div className="space-y-8">
                 <div className="flex items-start gap-5">
                   <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-pink-500 to-orange-500 flex items-center justify-center flex-shrink-0">
@@ -57,9 +85,12 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-white/60 text-sm">EMAIL</p>
-                    <a href="mailto:jahid.dev@gmail.com" className="text-white hover:text-pink-400 transition text-lg">
-                      jahid.dev@gmail.com
-                    </a>
+                    <Link
+                      href="jahidhasanbls46@gmail.com"
+                      className="text-white hover:text-pink-400 transition text-lg"
+                    >
+                      jahidhasanbls46@gmail.com
+                    </Link>
                   </div>
                 </div>
 
@@ -69,8 +100,11 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-white/60 text-sm">PHONE</p>
-                    <a href="tel:+8801712345678" className="text-white hover:text-pink-400 transition text-lg">
-                      +880 1712-345678
+                    <a
+                      href="tel:+8801516569041"
+                      className="text-white hover:text-pink-400 transition text-lg"
+                    >
+                      +880 1516569041
                     </a>
                   </div>
                 </div>
@@ -91,14 +125,17 @@ const Contact = () => {
             <div>
               <p className="text-white/60 text-sm mb-4">CONNECT WITH ME</p>
               <div className="flex gap-6">
-                {['LinkedIn', 'GitHub', 'Twitter', 'Instagram'].map((social) => (
-                  <a
-                    key={social}
-                    href="#"
-                    className="text-white/60 hover:text-white transition text-2xl"
+                {socialLinks.map((social) => (
+                  <Link
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={social.name}
+                    className="text-white/60 hover:text-white transition-all duration-300 text-2xl hover:scale-110"
                   >
-                    {social}
-                  </a>
+                    {social.icon}
+                  </Link>
                 ))}
               </div>
             </div>
@@ -110,7 +147,10 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <form onSubmit={handleSubmit} className="space-y-6 bg-zinc-900/80 border border-white/10 rounded-3xl p-8 md:p-10">
+            <form
+              onSubmit={handleSubmit}
+              className="space-y-6 bg-zinc-900/80 border border-white/10 rounded-3xl p-8 md:p-10"
+            >
               <div className="grid md:grid-cols-2 gap-6">
                 <input
                   type="text"

@@ -15,7 +15,7 @@ import {
   SiJsonwebtokens,
   SiGit,
   SiGithub,
-  SiBetterauth
+  SiBetterauth,
 } from "react-icons/si";
 import Link from "next/link";
 
@@ -262,15 +262,16 @@ const LiquidHero = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               style={{
                 fontFamily: "'DM Mono', monospace",
-                fontSize: "11px",
-                letterSpacing: "0.35em",
+                fontSize: "14px",
+                letterSpacing: "0.15em",
                 color: "rgba(255,255,255,0.45)",
                 textTransform: "uppercase",
                 marginBottom: "1.25rem",
                 fontWeight: 400,
               }}
             >
-              Full-Stack Developer
+              Hi, I'm <strong className="text-[#fff]">Jahid Hasan</strong>. A passionate Full-Stack Developer leveraging
+              the power of Next.js and the MERN ecosystem.{" "}
             </motion.p>
 
             <motion.div

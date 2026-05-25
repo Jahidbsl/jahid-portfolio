@@ -2,7 +2,17 @@
 const nextConfig = {
   // Tell Turbopack exactly where your project root is
   turbopack: {
-    root: '.',
+    root: ".",
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+        port: "",
+        pathname: "/**",
+      },
+    ],
   },
 };
 
