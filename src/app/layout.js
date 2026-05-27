@@ -45,7 +45,7 @@ export const metadata = {
 
   // Google Site Verification
   verification: {
-    google: "google-site-verification=wuKQstAevUpwzFVVduX_SLsCd7wbZU0OjzPLgglwGsg",
+    google: "google-site-verification: google45feff39d4b5fb92.html",
   },
 
   openGraph: {
