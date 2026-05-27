@@ -26,7 +26,7 @@ export const metadata = {
     template: "%s | Jahid Hasan",
   },
   description: "Md. Jahid Hasan - Professional Full-Stack Developer from Barishal, Bangladesh. Expert in Next.js, React, Node.js, MongoDB & Tailwind CSS.",
-  
+
   keywords: [
     "Jahid Hasan",
     "Md Jahid Hasan",
@@ -36,16 +36,15 @@ export const metadata = {
     "Full Stack Developer Bangladesh",
     "React Developer",
     "Freelance Web Developer",
-    "Barishal Web Developer",
-    "Portfolio"
+    "Barishal Web Developer"
   ],
 
   authors: [{ name: "Md. Jahid Hasan" }],
   creator: "Md. Jahid Hasan",
 
-  // Google Site Verification
+  // Google Verification (All Methods)
   verification: {
-    google: "google-site-verification: google45feff39d4b5fb92.html",
+    google: "4M-Xall_f3tTcfGz_i3lqiihhHBks8szXEuoFWA7eZA",   // Meta Tag
   },
 
   openGraph: {
@@ -54,13 +53,13 @@ export const metadata = {
     url: "https://jahid-portfolio-sandy.vercel.app",
     siteName: "Jahid Hasan Portfolio",
     title: "Jahid Hasan | Next.js & MERN Stack Developer",
-    description: "Professional Full-Stack Developer from Bangladesh. Expert in Next.js, MERN Stack & Modern Web Development.",
+    description: "Professional Full-Stack Developer from Bangladesh.",
     images: [
       {
         url: "https://i.ibb.co.com/NnLWY2jN/45b74f14-5230-469a-8bef-50c0355e8828.jpg",
         width: 1200,
         height: 630,
-        alt: "Jahid Hasan - Full Stack Developer Portfolio",
+        alt: "Jahid Hasan - Full Stack Developer",
       },
     ],
   },
@@ -85,8 +84,6 @@ export const metadata = {
 
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
   },
 };
 
