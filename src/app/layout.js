@@ -25,13 +25,14 @@ export const metadata = {
     default: "Jahid Hasan | Next.js & MERN Stack Developer",
     template: "%s | Jahid Hasan",
   },
-  description: "Md. Jahid Hasan - Professional Full-Stack Developer specializing in Next.js, React, Node.js, MongoDB & Tailwind CSS. Building fast, scalable and beautiful web applications.",
+  description: "Md. Jahid Hasan - Professional Full-Stack Developer from Barishal, Bangladesh. Expert in Next.js, React, Node.js, MongoDB & Tailwind CSS.",
   
   keywords: [
-    "Jahid Hasan", 
-    "Md Jahid Hasan", 
-    "Next.js Developer", 
-    "MERN Stack Developer", 
+    "Jahid Hasan",
+    "Md Jahid Hasan",
+    "Jahid Hasan Developer",
+    "Next.js Developer",
+    "MERN Stack Developer",
     "Full Stack Developer Bangladesh",
     "React Developer",
     "Freelance Web Developer",
@@ -42,6 +43,11 @@ export const metadata = {
   authors: [{ name: "Md. Jahid Hasan" }],
   creator: "Md. Jahid Hasan",
 
+  // Google Site Verification
+  verification: {
+    google: "4M-Xall_f3tTcfGz_i3lqiihhHBks8szXEuoFWA7eZA",
+  },
+
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -51,7 +57,7 @@ export const metadata = {
     description: "Professional Full-Stack Developer from Bangladesh. Expert in Next.js, MERN Stack & Modern Web Development.",
     images: [
       {
-        url: "https://i.ibb.co.com/NnLWY2jN/45b74f14-5230-469a-8bef-50c0355e8828.jpg",   
+        url: "https://i.ibb.co.com/NnLWY2jN/45b74f14-5230-469a-8bef-50c0355e8828.jpg",
         width: 1200,
         height: 630,
         alt: "Jahid Hasan - Full Stack Developer Portfolio",
