@@ -1,37 +1,39 @@
 export default function sitemap() {
+  const baseUrl = 'https://jahid-portfolio-sandy.vercel.app';
+
   return [
     {
-      url: 'https://jahid-portfolio-sandy.vercel.app',
+      url: baseUrl,
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 1,
     },
     {
-      url: 'https://jahid-portfolio-sandy.vercel.app/#about',
+      url: `${baseUrl}/#about`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: 'https://jahid-portfolio-sandy.vercel.app/#skills',
+      url: `${baseUrl}/#skills`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: 'https://jahid-portfolio-sandy.vercel.app/#projects',
+      url: `${baseUrl}/#projects`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: 'https://jahid-portfolio-sandy.vercel.app/#certifications',
+      url: `${baseUrl}/#education`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: 'https://jahid-portfolio-sandy.vercel.app/#education',
+      url: `${baseUrl}/#certifications`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
