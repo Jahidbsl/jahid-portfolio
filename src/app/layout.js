@@ -105,13 +105,12 @@ export default function RootLayout({ children }) {
   };
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${outfit.variable}`}>
-      <head>
+   
+      <body className="min-h-screen flex flex-col bg-black text-white antialiased">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-      </head>
-      <body className="min-h-screen flex flex-col bg-black text-white antialiased">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
