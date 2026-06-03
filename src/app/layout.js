@@ -91,25 +91,29 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Md. Jahid Hasan",
-    "jobTitle": "Next.js & MERN Stack Specialist",
-    "url": "https://jahid-portfolio-sandy.vercel.app",
-    "image": "https://i.ibb.co.com/NnLWY2jN/45b74f14-5230-469a-8bef-50c0355e8828.jpg",
-    "sameAs": [
-      "https://github.com/Jahidbsl", 
-      "https://www.linkedin.com/in/jahidhasan-webdev", 
-    ]
-  };
+
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${outfit.variable}`}>
    
       <body className="min-h-screen flex flex-col bg-black text-white antialiased">
-        <script
+      <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: `
+              {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Md. Jahid Hasan",
+                "jobTitle": "Next.js & MERN Stack Specialist",
+                "url": "https://jahid-portfolio-sandy.vercel.app",
+                "image": "https://i.ibb.co.com/NnLWY2jN/45b74f14-5230-469a-8bef-50c0355e8828.jpg",
+                "sameAs": [
+                  "https://github.com/Jahidbsl",
+                  "https://www.linkedin.com/in/jahidhasan-webdev"
+                ]
+              }
+            `,
+          }}
         />
         <Navbar />
         <main className="flex-1">{children}</main>
