@@ -385,7 +385,7 @@ const LiquidHero = () => {
           </div>
 
           <div className="lg:col-span-7 relative w-full h-[500px] md:h-[600px] lg:h-[650px] mt-10 lg:mt-0 overflow-visible">
-            <div className="absolute inset-0 flex flex-wrap justify-center items-center gap-4 lg:block">
+            <div className="absolute inset-0 flex flex-wrap justify-center items-center gap-4 sm:block lg:block">
               {skills.map((skill, i) => {
                 if (skill.isEmpty) {
                   return (
