@@ -140,7 +140,7 @@ const LiquidHero = () => {
       icon: SiJsonwebtokens,
       size: "w-20 h-20 md:w-24 md:h-24",
       bg: "bg-white/5",
-      pos: "bottom-[30%] right-[2%]",
+      pos: "bottom-[40%] right-[2%]",
     },
     {
       name: "Git",
