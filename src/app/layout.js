@@ -57,7 +57,7 @@ export const metadata = {
     description: "Professional Full-Stack Developer from Bangladesh.",
     images: [
       {
-        url: "https://i.ibb.co.com/NnLWY2jN/45b74f14-5230-469a-8bef-50c0355e8828.jpg",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Jahid Hasan - Full Stack Developer",
@@ -69,7 +69,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Jahid Hasan | Next.js & MERN Stack Developer",
     description: "Full-Stack Web Developer | Next.js & MERN Expert",
-    images: ["https://i.ibb.co.com/NnLWY2jN/45b74f14-5230-469a-8bef-50c0355e8828.jpg"],
+    images: ["/og-image.jpg"],
   },
 
   robots: {
