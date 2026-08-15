@@ -166,6 +166,9 @@ const LiquidHero = () => {
     },
   ];
 
+  // Filter out empty items for the mobile slider view
+  const validSkills = skills.filter((skill) => !skill.isEmpty);
+
   return (
     <>
       <div
@@ -384,16 +387,45 @@ const LiquidHero = () => {
             </motion.div>
           </div>
 
-          <div className="lg:col-span-7 relative w-full h-[500px] md:h-[600px] lg:h-[650px] mt-10 lg:mt-0 overflow-visible">
-            <div className="absolute inset-0 flex flex-wrap justify-center items-center gap-4 lg:block">
+          {/* Desktop Absolute Layout & Mobile Horizontal Slider */}
+          <div className="lg:col-span-7 relative w-full h-auto lg:h-[650px] mt-6 lg:mt-0 overflow-visible">
+            
+            {/* Mobile Horizontal Auto-Scrolling / Draggable Marquee Slider */}
+            <div className="block lg:hidden w-full overflow-x-auto no-scrollbar py-4">
+              <div className="flex gap-4 w-max px-4">
+                {validSkills.map((skill, i) => {
+                  const Icon = skill.icon;
+                  return (
+                    <div
+                      key={`mobile-${i}`}
+                      className="w-24 h-24 bg-white/10 rounded-full backdrop-blur-xl border border-white/10 flex flex-col items-center justify-center p-3 shadow-lg shrink-0 select-none"
+                    >
+                      <Icon className={`text-3xl ${skill.color} mb-1`} />
+                      <span
+                        className="text-white/80 text-center select-none text-[10px]"
+                        style={{
+                          fontFamily: "'DM Sans', sans-serif",
+                          fontWeight: 600,
+                          letterSpacing: "0.05em",
+                        }}
+                      >
+                        {skill.name}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Desktop Absolute Positioning Layout */}
+            <div className="hidden lg:block absolute inset-0">
               {skills.map((skill, i) => {
                 if (skill.isEmpty) {
                   return (
                     <div
                       key={`empty-${i}`}
                       className={`
-                        hidden lg:block
-                        ${skill.size} ${skill.bg} lg:absolute ${skill.pos}
+                        ${skill.size} ${skill.bg} absolute ${skill.pos}
                         rounded-full backdrop-blur-md border border-white/5
                         pointer-events-none select-none
                       `}
@@ -416,7 +448,7 @@ const LiquidHero = () => {
                     className={`
                       ${skill.size} 
                       ${skill.bg} 
-                      lg:absolute ${skill.pos}
+                      absolute ${skill.pos}
                       rounded-full backdrop-blur-xl border border-white/10 
                       flex flex-col items-center justify-center p-4
                       shadow-[0_15px_50px_rgba(0,0,0,0.3)] hover:bg-white/20 
@@ -444,10 +476,11 @@ const LiquidHero = () => {
                 );
               })}
             </div>
+
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-96 bg-gradient-to-t from-black to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-96 bg-gradient-to-t from-black to-transparent pointer-events-none" />
       </div>
     </>
   );
